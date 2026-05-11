@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ЛУНА — Студия пилатеса и йоги</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="header">
+<div class="container header__inner">
+<a href="#" class="logo">ЛУНА</a>
+<nav class="nav">
+<ul class="nav__list">
+<li><a href="#directions" class="nav__link">НАПРАВЛЕНИЯ</a></li>
+<li><a href="#booking" class="nav__link">РАСПИСАНИЕ</a></li>
+<li><a href="#pricing" class="nav__link">СТОИМОСТЬ</a></li>
+<li><a href="#contacts" class="nav__link">КОНТАКТЫ</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<main>
+<section class="hero">
+<div class="container hero__inner">
+<div class="hero__text">
+<h1>Тело в гармонии<br>с разумом</h1>
+<p>Первое в городе пространство, где вы научитесь слышать своё тело.</p>
+<a href="#booking" class="btn btn--primary btn--lg">ЗАПИСАТЬСЯ</a>
+</div>
+<div class="hero__image-wrapper">
+<img src="img/hero.jpg" alt="Занятие в студии" class="hero__img">
+</div>
+</div>
+</section>
+
+<section class="instructor-section">
+<div class="container">
+<div class="instructor-block">
+<div class="instructor__image">
+<img src="img/instructor.jpg" alt="Инструктор" class="instructor__img">
+</div>
+<div class="instructor__content">
+<span class="label">ИНСТРУКТОР</span>
+<h2>Анна Волкова</h2>
+<p>Сертифицированный тренер с 10-летним опытом. Специализация: пилатес, йога, реабилитация.</p>
+<p class="instructor__note">
+На занятиях мы не гонимся за количеством повторов или сложными асанами ради галочки. Вместо этого разбираемся, как работает именно ваше тело, какие мышцы нужно включить, а какие - расслабить.
+Когда человек понимает, что и зачем он делает, прогресс приходит быстрее. И главное - без травм и выгорания. Буду рада познакомиться на занятии!
+</p>
+</div>
+</div>
+<p class="instructor__footer-note">Мы продумали программу так, чтобы вы могли постепенно развиваться: от базовых техник до продвинутых практик. Не знаете, с чего начать? Запишитесь на пробное занятие — поможем выбрать направление, которое подойдёт именно вам.</p>
+</div>
+</section>
+
+<section id="directions" class="directions-section">
+<div class="container">
+<h2 class="section-title">НАПРАВЛЕНИЯ</h2>
+<div class="directions-grid">
+<figure class="direction-item">
+<img src="img/detail1.jpg" alt="Пилатес" class="direction__img">
+<figcaption class="direction__caption">ПИЛАТЕС</figcaption>
+</figure>
+<figure class="direction-item">
+<img src="img/detail2.jpg" alt="Йога" class="direction__img">
+<figcaption class="direction__caption">ЙОГА</figcaption>
+</figure>
+<figure class="direction-item">
+<img src="img/detail3.jpg" alt="Реформер" class="direction__img">
+<figcaption class="direction__caption">РЕФОРМЕР</figcaption>
+</figure>
+<figure class="direction-item">
+<img src="img/detail4.jpg" alt="HIIT" class="direction__img">
+<figcaption class="direction__caption">HIIT</figcaption>
+</figure>
+<figure class="direction-item">
+<img src="img/detail5.jpg" alt="Растяжка" class="direction__img">
+<figcaption class="direction__caption">РАСТЯЖКА</figcaption>
+</figure>
+<figure class="direction-item">
+<img src="img/detail6.jpg" alt="Реабилитация" class="direction__img">
+<figcaption class="direction__caption">РЕАБИЛИТАЦИЯ</figcaption>
+</figure>
+</div>
+</div>
+</section>
+
+<section id="pricing" class="pricing-section">
+<div class="container">
+<h2 class="section-title">СТОИМОСТЬ</h2>
+<div class="pricing-grid">
+<div class="pricing-category">
+<h3 class="pricing-category__title">РАЗОВЫЕ ЗАНЯТИЯ</h3>
+<ul class="pricing-list">
+<li class="pricing-item"><span class="pricing-item__name">Пробное в группе</span><span class="pricing-item__price">400 ₽</span></li>
+<li class="pricing-item"><span class="pricing-item__name">Разовое (любое направление)</span><span class="pricing-item__price">800 ₽</span></li>
+<li class="pricing-item"><span class="pricing-item__name">Индивидуальное занятие</span><span class="pricing-item__price">1 800 ₽</span></li>
+</ul>
+</div>
+<div class="pricing-category">
+<h3 class="pricing-category__title">АБОНЕМЕНТЫ</h3>
+<ul class="pricing-list">
+<li class="pricing-item"><span class="pricing-item__name">4 тренировки</span><span class="pricing-item__price">2 500 ₽</span></li>
+<li class="pricing-item"><span class="pricing-item__name">8 тренировок</span><span class="pricing-item__price">4 800 ₽</span></li>
+<li class="pricing-item"><span class="pricing-item__name">12 тренировок</span><span class="pricing-item__price">6 600 ₽</span></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<section id="booking" class="booking-section">
+<div class="container">
+<h2 class="section-title">РАСПИСАНИЕ</h2>
+<div class="calendar-wrapper">
+<div class="calendar-header-row">
+<button id="prevWeek" class="btn btn--nav" aria-label="Предыдущая неделя">‹</button>
+<div class="week-days" id="weekDays"></div>
+<button id="nextWeek" class="btn btn--nav" aria-label="Следующая неделя">›</button>
+</div>
+</div>
+<div class="slots-container">
+<h3 id="selectedDateTitle" class="slots-title">Выберите дату</h3>
+<ul id="slotsList" class="slots-list"></ul>
+<form id="bookingForm" class="booking-form hidden">
+<div class="form-row">
+<div class="form-group">
+<label for="userName">Имя</label>
+<input type="text" id="userName" required placeholder="Анна">
+</div>
+<div class="form-group">
+<label for="userPhone">Телефон</label>
+<input type="tel" id="userPhone" required placeholder="+7 (900) 123-45-67">
+</div>
+</div>
+<div class="form-actions">
+<button type="button" id="cancelBooking" class="btn btn--secondary">ОТМЕНА</button>
+<button type="submit" class="btn btn--primary">ЗАПИСАТЬСЯ</button>
+</div>
+</form>
+<div id="bookingMessage" class="message hidden"></div>
+</div>
+</div>
+</section>
+</main>
+
+<footer id="contacts" class="footer">
+<div class="container footer__inner">
+<div class="logo">ЛУНА</div>
+<p>ул. Литейная 1, Тула</p>
+<p>+7 (999) 000-00-00 | info@luna-studio.ru</p>
+</div>
+</footer>
+<script src="js/app.js"></script>
+</body>
+</html>
