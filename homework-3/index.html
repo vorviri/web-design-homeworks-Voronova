@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Приключения Жаба в Тёмном Лесу</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <canvas id="gameCanvas"></canvas>
+  <div class="vignette"></div>
+  <div id="uiOverlay" class="active">
+  
+    <div id="mainMenu" class="menu-panel">
+  <h1>Приключения Жаба</h1>
+  <h2>в Тёмном Лесу</h2>
+  <p>Серый мир. Одинокий путник. Кристаллы света,<br>разбросанные среди теней.</p>
+  
+  <button class="menu-btn" id="btnStart">Начать путь</button>
+  <button class="menu-btn" id="btnControls">Управление</button>
+  <button class="menu-btn dev" id="btnLevelSelect">Выбор уровня</button>
+  
+  <div id="levelSelect" style="display:none;">
+    <p style="color:#555; font-size:0.8em; letter-spacing:2px; margin-bottom:10px;">ВЫБОР УРОВНЯ</p>
+    <button class="menu-btn" data-level="0">I — Чаща леса</button>
+    <button class="menu-btn" data-level="1">II — Заброшенный дом</button>
+    <button class="menu-btn" data-level="2">III — Пещера</button>
+  </div>
+</div>
+
+    <div id="controlsPanel" class="menu-panel" style="display:none;">
+      <h2>Управление</h2>
+      <p>← → или A D — движение<br>↑ или W или Пробел — прыжок<br>Esc или P — пауза</p>
+      <button class="menu-btn" id="btnBackControls">Назад</button>
+    </div>
+
+    <div id="pausePanel" class="menu-panel" style="display:none;">
+      <h2>Пауза</h2>
+      <button class="menu-btn" id="btnResume">Продолжить</button>
+      <button class="menu-btn" id="btnRestart">Начать заново</button>
+      <button class="menu-btn" id="btnMenu">В меню</button>
+    </div>
+
+    <div id="losePanel" class="menu-panel lose-screen" style="display:none;">
+      <h1>Конец пути</h1>
+      <p>Тень поглотила тебя.</p>
+      <button class="menu-btn" id="btnRetry">Попробовать снова</button>
+      <button class="menu-btn" id="btnMenuLose">В меню</button>
+    </div>
+
+    <div id="storyPanel" class="menu-panel" style="display:none;">
+      <h2 id="storyTitle"></h2>
+      <div id="storyContent" class="story-text"></div>
+      <button class="menu-btn" id="btnBegin">Продолжить</button>
+    </div>
+
+    <div id="statsPanel" class="menu-panel" style="display:none;">
+      <h2>Уровень пройден</h2>
+      <div class="stats-score" id="statsScore">Очки: 0</div>
+      <div id="statsCrystals" style="margin: 15px 0;">
+        <span class="crystal-icon">◆</span>
+        <span class="crystal-icon">◆</span>
+        <span class="crystal-icon">◆</span>
+      </div>
+      <p style="color:#666; font-size:0.8em; margin-bottom:20px;">Собрано кристаллов: <span id="statsCrystalCount">0/0</span></p>
+      <button class="menu-btn" id="btnNext">Продолжить</button>
+      <button class="menu-btn" style="margin-top: 5px;" id="btnRetryStats">Повторить уровень</button>
+    </div>
+  </div>
+
+  <div id="hud" class="hud" style="display:none;">
+    <span id="livesDisplay"></span>
+    <span style="color:#444;">|</span>
+    <span class="crystal" id="crystalCount"></span>
+  </div>
+  <button id="pauseBtn" style="display:none;">❚❚</button>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
