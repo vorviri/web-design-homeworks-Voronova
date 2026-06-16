@@ -42,11 +42,4 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(el);
   });
 
-  // 4. Переключение тёмной темы по двойному клику (ИСПРАВЛЕННАЯ ВЕРСИЯ)
-  document.addEventListener('dblclick', () => {
-    const root = document.documentElement;
-    const isDark = root.getAttribute('data-theme') === 'dark';
-    root.setAttribute('data-theme', isDark ? 'light' : 'dark');
-  });
-
 });
